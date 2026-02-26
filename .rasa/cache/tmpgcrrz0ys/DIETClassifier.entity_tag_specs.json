@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-complaint_id",
+      "2": "I-complaint_id",
+      "3": "L-complaint_id",
+      "4": "U-complaint_id",
+      "5": "B-crime_type",
+      "6": "I-crime_type",
+      "7": "L-crime_type",
+      "8": "U-crime_type",
+      "9": "B-date",
+      "10": "I-date",
+      "11": "L-date",
+      "12": "U-date",
+      "13": "B-location",
+      "14": "I-location",
+      "15": "L-location",
+      "16": "U-location",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-complaint_id": 1,
+      "I-complaint_id": 2,
+      "L-complaint_id": 3,
+      "U-complaint_id": 4,
+      "B-crime_type": 5,
+      "I-crime_type": 6,
+      "L-crime_type": 7,
+      "U-crime_type": 8,
+      "B-date": 9,
+      "I-date": 10,
+      "L-date": 11,
+      "U-date": 12,
+      "B-location": 13,
+      "I-location": 14,
+      "L-location": 15,
+      "U-location": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

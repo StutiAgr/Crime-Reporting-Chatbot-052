@@ -1,0 +1,14 @@
+[
+  {
+    "name": "complaint_id",
+    "pattern": "\\d{4,6}"
+  },
+  {
+    "name": "crime_type",
+    "pattern": "(\\btheft\\b|\\brobbery\\b|\\bmurder\\b|\\bfraud\\b|\\bcyber\\ crime\\b|\\bharassment\\b|\\bburglary\\b|\\bdomestic\\ violence\\b|\\bkidnapping\\b|\\bscam\\b|\\bstalking\\b|\\bassault\\b|\\bhit\\ and\\ run\\b|\\bidentity\\ theft\\b|\\bextortion\\b|\\bchain\\ snatching\\b|\\barson\\b|\\bchild\\ abuse\\b|\\bpickpocketing\\b)"
+  },
+  {
+    "name": "location",
+    "pattern": "(\\bDelhi\\b|\\bMumbai\\b|\\bBangalore\\b|\\bChennai\\b|\\bKolkata\\b|\\bHyderabad\\b|\\bPune\\b|\\bJaipur\\b|\\bLucknow\\b|\\bAhmedabad\\b)"
+  }
+]

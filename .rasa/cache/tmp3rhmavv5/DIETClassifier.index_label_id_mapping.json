@@ -1,0 +1,11 @@
+{
+  "0": "affirm",
+  "1": "bot_challenge",
+  "2": "check_status",
+  "3": "deny",
+  "4": "file_complaint",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "inform",
+  "8": "out_of_scope"
+}

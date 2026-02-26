@@ -1,0 +1,57 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "check_status": 1,
+        "file_complaint": 2,
+        "goodbye": 3,
+        "greet": 4,
+        "inform": 5,
+        "nlu_fallback": 6,
+        "out_of_scope": 7,
+        "restart": 8,
+        "session_start": 9
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_save_complaint": 13,
+        "utter_ask_complaint_id": 14,
+        "utter_ask_date": 15,
+        "utter_ask_description": 16,
+        "utter_ask_location": 17,
+        "utter_complaint_saved": 18,
+        "utter_goodbye": 19,
+        "utter_greet": 20,
+        "complaint_form": 21
+      },
+      "entities": {
+        "complaint_id": 0,
+        "crime_type": 1,
+        "date": 2,
+        "location": 3
+      },
+      "slots": {},
+      "active_loop": {
+        "complaint_form": 0
+      }
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}
