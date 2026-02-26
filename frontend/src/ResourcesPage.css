@@ -1,0 +1,159 @@
+.resources-page {
+    background-color: var(--bg-body);
+}
+
+.resources-hero {
+    background-color: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.resources-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.resources-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.emergency-banner {
+    padding: 2rem 0;
+    margin-top: -2rem;
+    /* Overlap effect */
+}
+
+.emergency-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    border-left: 5px solid var(--accent);
+}
+
+.emergency-card h2 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.helpline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.helpline-item h3 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.helpline-item a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.helpline-item a:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.resource-categories,
+.faq-section,
+.external-links {
+    padding: 4rem 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.category-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.category-card ul {
+    list-style-position: inside;
+    color: var(--text-main);
+}
+
+.category-card li {
+    margin-bottom: 0.5rem;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+}
+
+.external-links {
+    background-color: var(--bg-surface);
+    text-align: center;
+}
+
+.links-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.links-list a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}

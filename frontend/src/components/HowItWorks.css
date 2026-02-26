@@ -1,0 +1,85 @@
+.how-it-works-section {
+    padding: 5rem 0;
+    background-color: var(--bg-body);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    position: relative;
+    margin-top: 3rem;
+}
+
+/* Connecting Line (Only visible on larger screens) */
+@media (min-width: 768px) {
+    .steps-line {
+        position: absolute;
+        top: 3rem;
+        left: 10%;
+        right: 10%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary), transparent);
+        /* Dashed effect hack or solid */
+        background: var(--border);
+        z-index: 0;
+    }
+}
+
+.step-card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.step-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.step-icon {
+    width: 6rem;
+    height: 6rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: var(--shadow-md);
+    margin: 0 auto;
+    border: 4px solid var(--bg-body);
+    /* Creates gap around line */
+}
+
+.step-number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 2px solid white;
+}
+
+.step-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.step-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}

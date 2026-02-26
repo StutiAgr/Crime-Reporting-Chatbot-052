@@ -1,0 +1,116 @@
+.complaint-table-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.complaint-table-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-size: 1.5rem;
+}
+
+.complaint-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.complaint-table th,
+.complaint-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+.complaint-table th {
+    background-color: var(--bg-body);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    border-bottom: 1px solid var(--border);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.complaint-table td {
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.complaint-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.complaint-table tbody tr:hover {
+    background-color: var(--bg-body);
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-select {
+    padding: 0.5rem 0.5rem;
+    /* Slightly smaller padding for select */
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid transparent;
+    /* default border */
+    cursor: pointer;
+    background-size: 16px;
+    /* Icon size */
+    appearance: none;
+    /* Remove default arrow to style if desired, or keep default */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2rem;
+    /* Space for arrow */
+}
+
+/* Add focus state for accessibility */
+.status-select:focus {
+    outline: none;
+    /* box-shadow: 0 0 0 2px var(--primary-color, #2563EB); */
+}
+
+
+.status-pending {
+    background-color: #FEF3C7;
+    /* Amber 100 */
+    color: #D97706;
+    /* Amber 600 */
+}
+
+.status-resolved {
+    background-color: #D1FAE5;
+    /* Emerald 100 */
+    color: #059669;
+    /* Emerald 600 */
+}
+
+.status-in-progress {
+    background-color: #DBEAFE;
+    /* Blue 100 */
+    color: #2563EB;
+    /* Blue 600 */
+}
+
+.status-rejected {
+    background-color: #FEE2E2;
+    /* Red 100 */
+    color: #DC2626;
+    /* Red 600 */
+}

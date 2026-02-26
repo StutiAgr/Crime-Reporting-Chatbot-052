@@ -1,0 +1,19 @@
+.footer {
+    background-color: var(--text-main);
+    color: #CBD5E1;
+    /* Slate 300 */
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.footer p:first-child {
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1rem;
+}

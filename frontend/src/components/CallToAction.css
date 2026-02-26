@@ -1,0 +1,56 @@
+.cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--bg-surface) 0%, #F1F5F9 100%);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-btn,
+.cta-btn-outline {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+}
+
+.cta-btn {
+    background-color: var(--accent);
+}
+
+.cta-btn:hover {
+    background-color: #be123c;
+    /* Darker Rose */
+}
+
+.cta-btn-outline {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.cta-btn-outline:hover {
+    background-color: var(--text-main);
+    color: white;
+}
