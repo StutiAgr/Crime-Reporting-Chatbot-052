@@ -109,7 +109,7 @@ class ActionSaveComplaint(Action):
             "description": description,
             "location": location,
             "date": date,
-            "status": "Registered",
+            "status": "Pending",
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
 

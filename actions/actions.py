@@ -186,7 +186,7 @@ class ActionSaveComplaint(Action):
             "description": description,
             "location": location,
             "date": date,
-            "status": "Registered",
+            "status": "Pending",
             "timestamp": datetime.now().isoformat(),
             "sentimentAnalysis": {
                 "sentiment": sentiment or "NEUTRAL",
@@ -204,6 +204,7 @@ class ActionSaveComplaint(Action):
         api_success = self.send_to_backend(complaint)
         
         # Prepare response message
+        print("api: ", api_success)
         if api_success:
             message = (
                 f"✅ Thank you! Your complaint has been registered successfully.\n\n"
