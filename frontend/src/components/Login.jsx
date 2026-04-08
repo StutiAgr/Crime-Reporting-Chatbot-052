@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth, isAdminEmail } from '../context/AuthContext';
 import './Login.css';
 
 const Login = () => {
@@ -28,9 +28,19 @@ const Login = () => {
 
     try {
       await login(formData.email, formData.password);
-      // navigate('/');
+      console.log("Login successful, navigating based on email");
+      console.log("Form data email:", formData.email);
+      
+      // Route based on email - use formData email, not backend data
+      if (isAdminEmail(formData.email)) {
+        console.log("Admin login successful, navigating to admin dashboard");
+        navigate('/admin-dashboard');
+      } else {
+        console.log("User login successful, navigating to home");
+        navigate('/');
+      }
     } catch (err) {
-      setError(err);
+      setError(err.message || 'Login failed. Please try again.');
     } finally {
       setLoading(false);
     }

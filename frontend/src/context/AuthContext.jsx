@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
+// Utility function to check if email is admin email
+export const isAdminEmail = (email) => {
+    return email === "admin@gmail.com";
+};
+
 export const useAuth = () => {
     return useContext(AuthContext);
 };
@@ -27,7 +32,8 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            fetch("http://localhost:3000/api/auth/login", {
+            console.log("Attempting login with email:", email);
+            return fetch("http://localhost:3000/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,24 +48,23 @@ export const AuthProvider = ({ children }) => {
                     return response.json();
                 })
                 .then((data) => {
+                    console.log("Login successful");
                     localStorage.setItem("authToken", data.token);
-                    if (data.user) {
-                        localStorage.setItem("user", JSON.stringify(data.user));
-                        setUser(data.user);
-                    }
-                    navigate("/");
+                    return true;
                 })
                 .catch((error) => {
                     console.error("Error logging in:", error);
+                    throw error;
                 });
         } catch (error) {
             console.error("Error logging in:", error);
+            throw error;
         }
     };
 
     const signup = async (username, email, password) => {
         try {
-            fetch("http://localhost:3000/api/auth/signup", {
+            return fetch("http://localhost:3000/api/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -78,13 +83,15 @@ export const AuthProvider = ({ children }) => {
                         localStorage.setItem("user", JSON.stringify(data.user));
                         setUser(data.user);
                     }
-                    navigate("/");
+                    return data.user;
                 })
                 .catch((error) => {
                     console.error("Error signing up:", error);
+                    throw error;
                 });
         } catch (error) {
             console.error("Error signing up:", error);
+            throw error;
         }
     };
 

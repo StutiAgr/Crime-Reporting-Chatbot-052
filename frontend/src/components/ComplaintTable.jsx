@@ -26,24 +26,27 @@ const ComplaintTable = () => {
     );
 
     try {
-      const response = await fetch(`http://localhost:3000/api/complaints/${id}/status`, {
+      console.log(`Updating complaint ${id} to status: ${newStatus}`);
+      const response = await fetch(`http://localhost:3000/api/complaints/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          // Assuming we might need auth later, passing token if available
           "Authorization": `Bearer ${localStorage.getItem("authToken")}`
         },
         body: JSON.stringify({ status: newStatus }),
       });
 
+      console.log(`Response status: ${response.status}`);
+      const responseData = await response.json();
+      console.log(`Response data:`, responseData);
+
       if (!response.ok) {
-        throw new Error("Failed to update status");
+        throw new Error(`Failed to update status: ${responseData.message || response.statusText}`);
       }
+      console.log("Status updated successfully");
     } catch (error) {
       console.error("Error updating status:", error);
-      // Revert optimistic update on error if needed, or just alert user
-      alert("Failed to update status on server.");
-      // Ideally we would fetch complaints again or revert local state here
+      alert(`Failed to update status: ${error.message}`);
     }
   };
 

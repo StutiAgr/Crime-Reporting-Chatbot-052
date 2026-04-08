@@ -1,0 +1,49 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+/* Admin Hero Section - Simplified */
+.hero-admin {
+  min-height: 40vh;
+  padding: 3rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-admin .hero-text {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hero-admin h1 {
+  font-size: 2.5rem;
+}
+
+/* Complaints Section */
+.hero-complaints {
+  min-height: auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--bg-body) 0%, #FAFBFF 100%);
+}
+
+.hero-complaints .hero-text {
+  max-width: 100%;
+}
+
+.complaints-section {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-admin,
+  .hero-complaints {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-admin h1 {
+    font-size: 1.8rem;
+  }
+}
